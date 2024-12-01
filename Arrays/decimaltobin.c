@@ -7,13 +7,12 @@ int main(){
     printf("enter the decimal value: ");
     scanf("%d",&decimal);
     // Convert decimal to binary
-    int i;
     for(i = 0; decimal != 0; i++, n++){
     a[i]= decimal%2;
     decimal = decimal/2;
     }
 
-
+g
     // then reverse and print aay
         // Temporary aay to store elements in reversed order
     int temp[n];

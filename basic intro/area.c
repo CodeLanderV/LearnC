@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 void main(){
 float r, l, b, ac, at;
 printf("Please enter radius of circle: ");

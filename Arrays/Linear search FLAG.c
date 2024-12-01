@@ -1,10 +1,10 @@
-// Linear Search
-
 #include <stdio.h>
+#include <stdbool.h> // Include the header for boolean type
 
-void main() {
+int main() {
     int n, i, s, count = 0;
     int a[100]; // Assuming a maximum size of 100 for the array
+    bool found = false; // Initialize the flag to false
 
     // Input the number of elements
     printf("Enter the number of elements: \n");
@@ -23,15 +23,19 @@ void main() {
     // ITERATING THE ARRAY
     for(i = 0; i < n; i++) {
         if(a[i] == s) {
-            printf("The number has been found. Its position is %d\n", i+1);
+            if (!found) {
+                printf("The number has been found. Its first position is %d\n", i+1);
+                found = true; // Set the flag to true
+            }
             count++;
         }
     }
 
-    if(count == 0) {
+    if(!found) {
         printf("The number was not found in the array.\n");
     } else {
-        printf("The repetition of the element is %d\n", count);
+        printf("The number was found %d times in the array.\n", count);
     }
 
+    return 0;
 }
